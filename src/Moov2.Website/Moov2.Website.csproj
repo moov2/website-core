@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-beta2-4369" />
   </ItemGroup>
 
 </Project>
