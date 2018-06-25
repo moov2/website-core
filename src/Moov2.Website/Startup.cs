@@ -16,7 +16,7 @@ namespace Moov2.Website
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
 
-            app.UseModules();
+            app.UseOrchardCore();
         }
     }
 }
