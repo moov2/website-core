@@ -1,0 +1,31 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $HTML
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Styles for `html` element.
+ */
+
+/**
+ * 1. Makes REM units easier to work with because 1rem = 10px.
+ */
+html {
+    font-family: $font-family-default;
+    font-size: 62.5%; /* 1. */
+    overflow-x: hidden;
+
+    &.is-fonts-loaded {
+        font-family: $font-family-loaded;
+    }
+
+    /**
+     * Disables transitions until page has fully loaded.
+
+    &.is-preload * {
+        transition: none !important;
+    }
+
+    */
+}

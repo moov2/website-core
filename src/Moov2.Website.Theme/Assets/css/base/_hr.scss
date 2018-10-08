@@ -1,0 +1,69 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $HR
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Styles for `hr` element.
+ */
+
+hr {
+	@include rem(margin-bottom, $spacing-large);
+
+	border: 0;
+	border-bottom: 1px solid $border-color-default;
+
+	box-sizing: border-box;
+	margin-top: 0;
+	max-width: $content-width-large;
+	width: auto;
+
+	@media all and (min-width: $content-width-large) {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+}
+
+.hr--narrow {
+	max-width: $spacing-large * 2;
+}
+
+.hr--small {
+	@include rem(padding-top, $spacing-default);
+	@include rem(margin-bottom, $spacing-default);
+
+	@media all and (min-width: $bp-medium-large) {
+		@include rem(padding-top, $spacing-large);
+		@include rem(margin-bottom, $spacing-large);
+	}
+}
+
+.hr--spacer {
+	@include rem(margin-bottom, $spacing-x-large);
+	@include rem(padding-top, $spacing-x-large);
+
+	@media all and (min-width: $bp-medium-large) {
+		@include rem(margin-bottom, $spacing-gigantic);
+		@include rem(padding-top, $spacing-gigantic);
+	}
+
+	&-short {
+		@media all and (min-width: $bp-medium-large) {
+			@include rem(margin-bottom, $spacing-x-large);
+			@include rem(padding-top, $spacing-x-large);
+		}
+	}
+
+	&-large {
+		@media all and (min-width: $bp-medium-large) {
+			@include rem(margin-bottom, $spacing-gigantic * 2);
+			@include rem(padding-top, $spacing-gigantic * 2);
+		}
+	}
+}
+
+.hr--transparent {
+	border-bottom: 0;
+}

@@ -1,0 +1,31 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $CONTENT
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Page content should be placed with the `content` container to override the
+ * default styling of base elements.
+ */
+
+.content-item {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+
+	p, h2, h3, h4, h5, h6 {
+		box-sizing: border-box;
+	}
+
+	.projection-page & {
+		padding: 0;
+	}
+}
+
+.content-item--fill {
+	padding-bottom: 0;
+}
+
+.homepage { padding-top: 0; }
+.page { padding-top: 0; }

@@ -1,0 +1,391 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $BACKGROUND
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Utility classes for adding background properties.
+ */
+
+.bg--cover {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg--position-top {
+    background-position: center top;
+}
+
+/**
+ * Colours
+ */
+
+.bg--color-brand {
+    background-color: $color-brand;
+    color: $color-white;
+}
+
+.bg--color-blue {
+    background-color: $color-blue;
+    color: white;
+}
+
+.bg--color-purple {
+    background-color: $color-purple;
+    color: white;
+}
+
+.bg--color-grey { background-color: $color-grey; }
+.bg--color-grey-dark { background-color: $color-grey-dark; }
+.bg--color-grey-darkest { background-color: $color-grey-darkest; }
+.bg--color-grey-light { background-color: $color-grey-light; }
+.bg--color-grey-lightest { background-color: $color-grey-lightest; }
+.bg--color-grey-fable { background-color: #090909; }
+.bg--color-red { background: $color-red; }
+.bg--color-rje { background: $color-rje; }
+
+/**
+ * skewing backgrounds only works if the element it is applied to has a fixed height
+ */
+.bg--skew {
+    color: white;
+    position: relative;
+
+    .section__content {
+        position: relative;
+        z-index: 1;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 140%;
+        left: 0;
+        top: -20%;
+
+        transform: skewY(-4deg);
+    }
+}
+
+.bg--skew-color-blue:after { background-color: $color-blue; }
+.bg--skew-color-brand:after { background-color: $color-brand; }
+.bg--skew-color-purple:after { background-color: $color-purple; }
+.bg--skew-color-teal:after { background-color: $color-teal; }
+.bg--skew-color-red:after { background-color: $color-red; }
+
+.bg--skew-home {
+    overflow: hidden;
+    position: absolute;
+
+    &:after {
+        @include rem(height, $spacing-x-large * 10);
+
+        bottom: -393px;
+        top: auto;
+
+        background-color: rgba(37,37,37,.4); /* MS */
+
+        @include bp-min-width($bp-medium) {
+            bottom: -337px;
+        }
+
+        @include bp-min-width($bp-medium-large) {
+            bottom: -268px;
+        }
+    }
+}
+
+.bg--skew-hello-games {
+    color: white;
+
+    &:after {
+        background: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/starfield.jpg);
+
+        @include bp-min-width($bp-medium) {
+            background-size: cover;
+        }
+    }
+}
+
+/**
+ * Image backgrounds
+ */
+
+.bg--graph-paper {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/bg-graph-paper-26x26.jpg);
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.bg--starfield {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/starfield.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/**
+ * Project specific backgrounds
+ */
+
+.bg--fable-legends {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Microsoft%20Studios/work-fable-legends-370x500.jpg);
+    background-position: center;
+    background-size: cover;
+
+    @include bp-min-width($bp-medium) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Microsoft%20Studios/work-fable-legends-780x660.jpg);
+    }
+
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Microsoft%20Studios/work-fable-legends-1260x700.jpg);
+    }
+
+    @include bp-min-width($bp-huge) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Microsoft%20Studios/work-fable-legends-2560x900.jpg);
+    }
+}
+
+.bg--fable-legends-excite {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Microsoft%20Studios/work-microsoft-studios-excite-2100x980.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.bg--fable-legends-video {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Microsoft%20Studios/work-microsoft-studios-video-2100x1260.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.bg--guip {
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Game%20UI%20Patterns/bg-work-gameuipatterns-2100x610.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: $color-white;
+    }
+}
+
+.bg--guip-tile {
+    @include bp-min-width($bp-large) {
+        background-color: #0957ae;
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Game%20UI%20Patterns/repeating-pattern-fade.png);
+        background-position: center;
+        background-repeat: repeat;
+        background-size: contain;
+        color: $color-white;
+    }
+}
+
+.bg--guip-blueprint {
+    background-color: #0957ae;
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Game%20UI%20Patterns/blueprint-bg-tile.png);
+    background-repeat: repeat;
+
+    svg {
+        height: auto;
+        width: 100%;
+    }
+}
+
+.bg--hello-games {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-370x500.jpg);
+    background-position: center;
+    background-size: cover;
+
+    @include bp-min-width($bp-medium) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-780x660.jpg);
+    }
+
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-1260x700.jpg);
+    }
+
+    @include bp-min-width($bp-huge) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-2560x900.jpg);
+    }
+}
+
+.bg--league-of-legends {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/work-league-of-legends-370x500-v2.jpg);
+    background-position: center;
+    background-size: cover;
+
+    @include bp-min-width($bp-medium) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/work-league-of-legends-780x660.jpg);
+    }
+
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/work-league-of-legends-1260x700.jpg);
+    }
+
+    @include bp-min-width($bp-huge) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/work-league-of-legends-2560x900.jpg);
+    }
+}
+
+.bg--lol-compare {
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/bg-work-lol-compare-2100x610.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: $color-white;
+    }
+}
+
+.bg--microsoft-studios {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/fable_legends_2-HD.jpg);
+    background-position: top center;
+    background-size: cover;
+}
+
+.bg--rocket-jump {
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Rocket%20Jump%20Events/bg-work-rje-2100x610-v3.jpg);
+        background-position: center;
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+}
+
+.bg--rje-cloud-1,
+.bg--rje-cloud-2,
+.bg--rje-cloud-3 {
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.bg--rje-cloud-1 {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Rocket%20Jump%20Events/work-rocket-jump-cloud-1.png);
+    height: 120px;
+    left: -226px;
+    top: 20px;
+    width: 140px;
+
+    @include bp-min-width($bp-medium) {
+        top: 70px;
+    }
+}
+
+.bg--rje-cloud-2 {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Rocket%20Jump%20Events/work-rocket-jump-cloud-2.png);
+    height: 120px;
+    right: -225px;
+    top: 170px;
+    width: 120px;
+
+    @include bp-min-width($bp-medium) {
+        top: 225px;
+    }
+}
+
+.bg--rje-cloud-3 {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Rocket%20Jump%20Events/work-rocket-jump-cloud-3.png);
+    height: 100px;
+    left: -237px;
+    top: 100px;
+    width: 100px;
+    z-index: -1;
+
+    @include bp-min-width($bp-medium) {
+        top: 450px;
+        z-index: 1;
+    }
+}
+
+.bg--rush-of-blood {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-2560x1440.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.bg--supermassive-games {
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/bg-work-supermassive-games-2100x610.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: $color-white;
+    }
+}
+
+.bg--supermassive-games-rob {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/bg-supermassive-games-rob-2100x980.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.bg--supermassive-games-skull {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/bg-supermassive-games-skull-2100x1348.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.bg--abrsm {
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/ABRSM/bg-work-abrsm-2100x610.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: $color-white;
+    }
+}
+
+.bg--choirplayer {
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/ChoirPlayer/bg-work-choirplayer-2100x610.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: $color-white;
+    }
+}
+
+.bg--heat {
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/HEAT/bg-work-heat-2100x610.png);
+        background-position: center;
+        background-repeat: repeat-x;
+        background-size: contain;
+        color: $color-white;
+    }
+}
+
+.bg--tomgates {
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/TomGates/bg-work-tomgates-2100x610.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: $color-white;
+    }
+}
+
+.bg--until-dawn {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-header-370x500.jpg);
+    background-position: center;
+    background-size: cover;
+
+    @include bp-min-width($bp-medium) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-header-780x660.jpg);
+    }
+
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-header-1260x700.jpg);
+    }
+
+    @include bp-min-width($bp-huge) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-header-2560x900.jpg);
+    }
+}

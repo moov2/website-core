@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moov2.Website", "Moov2.Website\Moov2.Website.csproj", "{B1563D02-07B1-45E7-A871-DF9D90B5A725}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moov2.Website", "Moov2.Website\Moov2.Website.csproj", "{B1563D02-07B1-45E7-A871-DF9D90B5A725}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moov2.Website.Theme", "Moov2.Website.Theme\Moov2.Website.Theme.csproj", "{A3CE27D5-64E5-47B1-832F-CA08A3DF77CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Themes", "Themes", "{A2C2B530-A738-4D38-99D6-E63698EFAAE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{B1563D02-07B1-45E7-A871-DF9D90B5A725}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1563D02-07B1-45E7-A871-DF9D90B5A725}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1563D02-07B1-45E7-A871-DF9D90B5A725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3CE27D5-64E5-47B1-832F-CA08A3DF77CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3CE27D5-64E5-47B1-832F-CA08A3DF77CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3CE27D5-64E5-47B1-832F-CA08A3DF77CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3CE27D5-64E5-47B1-832F-CA08A3DF77CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A3CE27D5-64E5-47B1-832F-CA08A3DF77CB} = {A2C2B530-A738-4D38-99D6-E63698EFAAE2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7283A160-7715-4273-8610-F327BBED7452}

@@ -1,0 +1,304 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $ANIMATION
+ * -----------------------------------------------------------------------------
+ */
+
+/*
+ * Hero images on home page
+*/
+
+.animation--hero-fade {
+    animation-name: HeroFade;
+    animation-duration: 12s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes HeroFade {
+    0% { opacity: 0; }
+    40% { opacity: 0; }
+    50% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/*
+ * Hero images on home page
+*/
+
+.animation--hero-cta-fade {
+    animation-name: HeroCTAFade;
+    animation-duration: 12s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes HeroCTAFade {
+    0% { background: $color-hello-games; }
+    40% { background: $color-hello-games; }
+    50% { background: #40806a; }
+    90% { background: #40806a; }
+    100% { background: $color-hello-games; }
+}
+
+/*
+ * Hello Games
+*/
+
+.animation--bike {
+    left: 0;
+    position: absolute;
+    top: 0;
+    max-width: 320px;
+
+    animation-name: HelloGamesBike;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes HelloGamesBike {
+    0% { transform:  translate(0px,-10px); }
+    50% { transform:  translate(0px,-15px); }
+    100% { transform:  translate(0px,-10px); }
+}
+
+.animation--bike-shadow {
+    animation-name: HelloGamesBikeShadow;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes HelloGamesBikeShadow {
+    0% { opacity: 1; }
+    50% { opacity: .5; }
+    100% { opacity: 1; }
+}
+
+.animation--freighter {
+    position: absolute;
+    bottom: -8rem;
+    left: 5rem;
+    max-width: 75%;
+    z-index: 1;
+
+    pointer-events: none;
+
+    animation-name: HelloGamesFreighter;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
+
+    @include bp-min-width($bp-tiny) {
+        bottom: -10rem;
+        left: 7rem;
+    }
+    @include bp-min-width($bp-small) {
+        bottom: -10rem;
+        left: 17%;
+    }
+    @include bp-min-width($bp-medium) {
+        bottom: -12rem;
+        left: 50%;
+        margin-left: -245px;
+    }
+    @include bp-min-width($bp-large) {
+        bottom: 0rem;
+        left: auto;
+        margin-left: auto;
+        margin-right: -60rem;
+        max-width: 350px;
+        right: 50%;
+    }
+    @include bp-min-width($bp-x-large) {
+        margin-right: -63rem;
+    }
+    @include bp-min-width($bp-huge) {
+        margin-right: -74rem;
+    }
+    @include bp-min-width($bp-huge + 350) {
+        bottom: -10rem;
+        margin-right: -89rem;
+        max-width: none;
+    }
+}
+
+@keyframes HelloGamesFreighter {
+    0% { transform:  translate(0px,-10px); }
+    50% { transform:  translate(0px,0px); }
+    100% { transform:  translate(0px,-10px); }
+}
+
+/*
+ * Rocket Jump Events clouds (work page)
+*/
+
+.animation--rje-cloud-1,
+.animation--rje-cloud-2,
+.animation--rje-cloud-3 {
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes RJECloud1 {
+    0% { left: -140px; }
+    100% { left: 100%; }
+}
+
+.animation--rje-cloud-1 {
+    animation-delay: 3s;
+    animation-duration: 30s;
+    animation-name: RJECloud1;
+
+    @include bp-min-width($bp-medium) {
+        animation-duration: 80s;
+    }
+}
+
+@keyframes RJECloud2 {
+    0% { right: -120px; }
+    100% { right: 100%; }
+}
+
+.animation--rje-cloud-2 {
+    animation-delay: 9s;
+    animation-duration: 60s;
+    animation-name: RJECloud2;
+
+    @include bp-min-width($bp-medium) {
+        animation-duration: 100s;
+    }
+}
+
+@keyframes RJECloud3 {
+    0% { left: -100px; }
+    100% { left: 100%; }
+}
+
+.animation--rje-cloud-3 {
+    animation-delay: 12s;
+    animation-duration: 80s;
+    animation-name: RJECloud3;
+
+    @include bp-min-width($bp-medium) {
+        animation-duration: 120s;
+    }
+}
+
+/*
+ * Rocket Jump Events header (post)
+*/
+
+@keyframes RocketMan {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.animation--rje-man {
+    @include svg-rje-man($fillColor: $color-rje-light);
+
+    position: absolute;
+    height: 250px;
+    width: 100px;
+    bottom: 50px;
+    left: 45%;
+    z-index: 2;
+
+    animation: RocketMan 3s ease infinite;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media all and (min-width: $bp-v-tiny) {
+        left: 35%;
+    }
+
+    @media all and (min-width: $bp-medium) {
+        bottom: 80px;
+        left: 75%;
+    }
+
+    @media all and (min-width: $bp-medium-large) {
+        bottom: 145px;
+        height: 340px;
+        left: 67%;
+        width: 160px;
+    }
+}
+
+@keyframes RocketClouds {
+    0% { background-position: 0 0; }
+    50% { background-position: -2600px 0; }
+    100% { background-position: -5200px 0; }
+}
+
+@keyframes RocketClouds2 {
+    0% { background-position: -500px 0; }
+    50% { background-position: -2000px 0; }
+    100% { background-position: -3500px 0; }
+}
+
+.animation--rje-cloud-4,
+.animation--rje-cloud-5 {
+    @include svg-rje-clouds($fillColor: $color-rje-lightest);
+
+    width: 100%;
+    height: 260px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+
+    animation: RocketClouds 40s linear infinite;
+
+    background-repeat: repeat-x;
+    background-size: 2600px 601px;
+
+    @media all and (min-width: $bp-medium) {
+        height: 300px;
+    }
+
+    @media all and (min-width: $bp-medium-large) {
+        height: 320px;
+    }
+
+    @media all and (min-width: $bp-huge) {
+        height: 390px;
+    }
+}
+
+.animation--rje-cloud-5 {
+    @include svg-rje-clouds($fillColor: $color-rje-dark);
+
+    bottom: 0;
+    height: 347px;
+    z-index: 1;
+
+    animation: RocketClouds2 60s linear infinite;
+    background-size: 1500px 347px;
+    opacity: 0.2;
+
+    @media all and (min-width: $bp-medium-large) {
+        height: 320px;
+    }
+
+    @media all and (min-width: $bp-huge) {
+        bottom: 140px;
+    }
+}
+
+/*
+ * Game UI Patterns example
+ */
+
+.animation--guip {
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-name: guipBlueprint;
+}
+
+@keyframes guipBlueprint {
+    0%   { transform: translateX(0); }
+    30%   { transform: translateX(50px); }
+    70%   { transform: translateX(-50px); }
+    100% { transform: translateX(0); }
+}

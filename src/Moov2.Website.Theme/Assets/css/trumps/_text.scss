@@ -1,0 +1,105 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $TEXT
+ * -----------------------------------------------------------------------------
+ */
+
+
+/**
+ * Utility classes for changing how text is displayed.
+ */
+
+.text--heading {
+    @include rem(font-size, $font-size-heading);
+
+    font-family: $font-family-heading;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.text--impact {
+    @include rem(font-size, $font-size-small * 2);
+
+    line-height: 1.4;
+
+    @media all and (min-width: $bp-small) {
+        @include rem(font-size, $font-size-heading);
+    }
+}
+
+.text--italic { font-style: italic; }
+
+.text--light { color: $font-color-light; }
+
+.text--centered { text-align: center; }
+.text--centered\@medium {
+    @media all and (min-width: $bp-medium) {
+        text-align: center;
+    }
+}
+.text--centered\@medium-large {
+    @media all and (min-width: $bp-medium-large) {
+        text-align: center;
+    }
+}
+.text--centered\@large {
+    @media all and (min-width: $bp-large) {
+        text-align: center;
+    }
+}
+.text--left { text-align: left; }
+.text--left\@medium {
+    @media all and (min-width: $bp-medium) {
+        text-align: left;
+    }
+}
+.text--left\@medium-large {
+    @media all and (min-width: $bp-medium-large) {
+        text-align: left;
+    }
+}
+.text--left\@large {
+    @media all and (min-width: $bp-large) {
+        text-align: left;
+    }
+}
+.text--right { text-align: right; }
+.text--right\@medium {
+    @media all and (min-width: $bp-medium) {
+        text-align: right;
+    }
+}
+
+.text--large {
+	@include rem(font-size, $font-size-large);
+	@include rem(line-height, $font-size-large + $line-height-addition);
+}
+
+.text--small {
+	@include rem(font-size, $font-size-small);
+}
+
+.text--cs-fable { color: $color-cs-fable; }
+.text--grey { color: $color-grey; }
+.text--white { color: $color-white; }
+
+.text--line-height-compact { line-height: 1; }
+.text--line-height-loose { line-height: 1.4; }
+
+.text--shadow-light { text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); }
+.text--shadow { text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); }
+
+.text--uppercase { text-transform: uppercase; }
+
+.text--size-none { font-size: 0; }
+
+.text--breadcrumb {
+    @include rem(padding, $spacing-small $spacing-base);
+    @include rem(border-radius, $spacing-default / 2);
+
+    display: inline-block;
+    width: auto;
+
+    background: $color-grey-lightest;
+    color: $color-grey-darkest;
+}

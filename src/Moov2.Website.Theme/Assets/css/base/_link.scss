@@ -1,0 +1,107 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $LINK
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Styles for the hyperlink elements.
+ */
+
+a {
+	color: $color-primary;
+	display: inline-block;
+	font-weight: $font-weight-default;
+	max-width: 100%;
+	text-decoration: none;
+
+	transition: color $animation-duration-default $animation-timing-default;
+
+	&:active,
+    &:focus,
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+/**
+ * Removes the underline from the link.
+ */
+
+a.link--blank {
+    color: $font-color-default;
+	text-decoration: none;
+}
+
+.link--cta {
+	@include rem(font-size, $font-size-small);
+	@include rem(padding, $spacing-default / 2 $spacing-small * 2);
+
+	display: inline-block;
+
+	background: $color-brand;
+	border-radius: $spacing-base / 3;
+	color: $color-white;
+	font-family: $font-family-heading;
+	font-weight: 400;
+	text-transform: uppercase;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.link--cta-white {
+	background: $color-white;
+	color: $color-brand;
+}
+
+.link--cta-white\@large {
+	@include bp-min-width($bp-large) {
+		background: $color-white;
+		color: $color-brand;
+	}
+}
+
+.link--cta-large {
+	@include bp-min-width($bp-medium) {
+		@include rem(font-size, $font-size-default);
+		@include rem(padding, $spacing-base $spacing-default);
+	}
+}
+
+.link--cta-hero {
+}
+
+.link--border {
+	background: none;
+	border: 3px solid;
+}
+
+.link--color-blue {
+	background: $color-blue;
+	color: $color-white;
+}
+
+.link--color-white {
+	color: $color-white;
+}
+
+.manage-actions {
+	bottom: 0;
+	position: fixed;
+	right: 0;
+	z-index: 10;
+
+	> a {
+	    padding: $spacing-default / 2 $spacing-default;
+
+		background-color: $color-hello-games;
+	    color: white;
+	    font-family: $font-family-heading;
+	    font-weight: 700;
+	    text-transform: uppercase;
+
+	    &:hover { text-decoration: none; }
+	}
+}

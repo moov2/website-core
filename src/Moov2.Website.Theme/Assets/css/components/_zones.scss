@@ -1,0 +1,88 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $ZONES
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Zones are containers in Orchard that hold various UI elements (e.g. shapes).
+ * CSS classes for a zone are determined by the Orchard core.
+ */
+
+.zone-logo {
+	@media all and (min-width: $bp-medium) {
+		width: 20%;
+	}
+
+	a { display: block; }
+}
+
+.zone-navigation {
+	@include rem(padding-left, $spacing-large);
+
+	flex: 1;
+
+	/* IE10+ CSS styles go here */
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		flex: 0 1 auto;
+    }
+
+	@media all and (min-width: $bp-v-tiny) {
+		flex: initial;
+		padding-left: 0;
+		width: 60%;
+	}
+
+	@media all and (min-width: $bp-tiny) { width: 50%; }
+	@media all and (min-width: $bp-small) {	width: 40%;	}
+	@media all and (min-width: $bp-medium) { @include rem(width, $spacing-large * 8.5);	}
+
+	a {
+		@include rem(font-size, $font-size-small);
+		@include rem(padding-top, $spacing-small / 3);
+
+		color: $color-grey-dark;
+
+		@media all and (min-width: $bp-medium) {
+			@include rem(font-size, $font-size-default);
+
+			padding-top: 0;
+		}
+	}
+}
+
+/**
+ * Changes navigation links to white against dark backgrounds.
+ */
+html {
+	&.is-inverted-header {
+		.zone-navigation a { color: $color-white; }
+	}
+}
+
+.zone-footer-primary,
+.zone-footer-secondary {
+	@include rem(padding-left, $spacing-base);
+	@include rem(padding-right, $spacing-base);
+
+	background-color: $color-brand;
+	color: $color-grey-dark;
+
+	@media all and (min-width: $bp-medium) {
+		@include rem(padding-left, $spacing-large);
+		@include rem(padding-right, $spacing-large);
+	}
+
+	a { color: $color-grey-dark; }
+
+	hr { border-color: $color-grey-darkest; }
+}
+
+.zone-footer-primary {
+	@include rem(padding-top, $spacing-x-large);
+	@include rem(padding-bottom, $spacing-large / 4);
+}
+
+.zone-footer-secondary {
+	@include rem(padding-bottom, $spacing-x-large);
+}

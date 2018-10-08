@@ -1,0 +1,72 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $LOGO
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Displaying company logos.
+ */
+
+.logo {
+	display: inline-block;
+}
+
+.logo--moov2 {
+    @include svg-moov2-m();
+    height: $logo-brand-height;
+    width: $logo-brand-width-m;
+	line-height: 0; 
+	font-size: 0;
+	color: transparent;
+
+    @media all and (min-width: $bp-v-tiny) {
+        @include svg-moov2();
+        width: $logo-brand-width;
+    }
+}
+
+/**
+ * Changes the logo to white for use against dark backgrounds.
+ */
+html {
+    &.is-inverted-header .header--masthead .logo--moov2 {
+        @include svg-moov2-m($color-white);
+
+        @media all and (min-width: $bp-v-tiny) {
+            @include svg-moov2($color-white);
+        }
+    }
+}
+
+.logo--moov2-grey {
+    @include svg-moov2-m($color-grey-dark);
+
+    @media all and (min-width: $bp-v-tiny) {
+        @include svg-moov2($color-grey-dark);
+    }
+}
+
+.logo--technology {
+	display: block;
+	max-height: $logo-technology-height;
+	max-width: $logo-technology-width;
+}
+
+.logo--client-fixed {
+    @include rem(padding, $spacing-default $spacing-base);
+
+    width: 100%;
+
+    &:first-child { @include rem(padding-top, $spacing-large); }
+    &:last-child { @include rem(padding-bottom, $spacing-large); }
+
+    @media all and (min-width: $bp-medium) {
+        @include rem(margin, $spacing-default);
+        @include rem(min-height, 200px);
+        @include rem(width, 300px);
+
+        &:first-child { padding-top: 0; }
+        &:last-child { padding-bottom: 0; }
+    }
+}

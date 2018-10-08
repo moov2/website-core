@@ -1,0 +1,20 @@
+<article class="content-item content-item--fill homepage">
+    {% if Model.Header and Model.Meta != null %}
+    <header>
+        {{ Model.Header | shape_render }}
+        {% if Model.Meta != null %}
+        <div class="metadata">
+            {{ Model.Meta | shape_render }}
+        </div>
+        {% endif %}
+    </header>
+    {% endif %}
+
+    {{ Model.Content | shape_render }}
+
+    {% if Model.Footer != null %}
+    <footer>
+        {{ Model.Footer | shape_render }}
+    </footer>
+    {% endif %}
+</article>

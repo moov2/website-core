@@ -1,0 +1,163 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $PROMO
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Promotes a piece of content.
+ */
+
+.promo {
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+}
+
+	.promo__brand,
+	.promo__image,
+	.promo__title {
+		box-sizing: border-box;
+		display: block;
+	}
+
+	.promo__brand {
+		@include rem(max-width, 230px);
+
+		margin-left: auto;
+		margin-right: auto;
+
+		@include bp-min-width($bp-medium) {
+			@include rem(max-width, 300px);
+		}
+
+		@include bp-min-width($bp-large) {
+			max-width: 100%;
+		}
+	}
+
+	.promo__image {
+
+		.embed-container {
+			position: relative;
+			padding-bottom: 56.25%;
+			height: 0;
+			overflow: hidden;
+			width: 100%;
+			z-index: 2;
+		}
+
+		.embed-container iframe,
+		.embed-container object,
+		.embed-container embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+	}
+
+	.promo__content {
+		@include rem(margin-bottom, $spacing-default);
+		@include rem(margin-left, $spacing-base);
+		@include rem(margin-right, $spacing-base);
+
+		box-sizing: border-box;
+
+		@include bp-min-width($bp-medium) {
+			@include rem(max-width, 460px);
+
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@include bp-min-width($bp-large) {
+			@include rem(margin-left, -$spacing-x-large);
+			@include rem(margin-right, $spacing-gigantic);
+			@include rem(max-width, 300px);
+			@include rem(width, 300px);
+		}
+
+		.promo--rev & {
+			@include bp-min-width($bp-large) {
+				@include rem(margin-left, $spacing-gigantic);
+				@include rem(margin-right, -$spacing-x-large);
+			}
+		}
+
+		&--no-margin-left {
+			@include bp-min-width($bp-large) {
+				margin-left: 0;
+			}
+		}
+
+		&--no-margin-right {
+			@include bp-min-width($bp-large) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.promo__phone {
+		@include rem(width, 282px);
+		@include rem(height, 483px);
+
+		box-sizing: border-box;
+		padding-top: 56px;
+    	padding-left: 43px;
+    	padding-right: 43px;
+		position: relative;
+
+		@include bp-min-width($bp-medium) {
+			@include rem(width, 582px);
+			@include rem(height, 1000px);
+
+			padding-top: 87px;
+	    	padding-left: 91px;
+	    	padding-right: 91px;
+		}
+
+		&:before {
+			content: "";
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 10;
+
+		    background: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/iphone-7-frame.png) 0 0 no-repeat;
+		    background-size: cover;
+		}
+	}
+
+		.promo__description,
+		.promo__title {
+			@include rem(margin-bottom, $spacing-default);
+
+			width: 100%;
+		}
+
+		.promo__title {
+		}
+
+		p.promo__description,
+		.promo__description,
+		.promo__title {
+			padding-left: 0;
+			padding-right: 0;
+
+			line-height: 1.4;
+		}
+
+		.promo__btn {
+			@include rem(font-size, $font-size-large);
+			@include rem(width, $promo-btn-width);
+
+			font-weight: $font-weight-bold;
+			text-transform: uppercase;
+		}
+
+	.promo__link { display: block; }

@@ -1,0 +1,280 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $SECTION
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Sections should be used in content to define the width of the content.
+ */
+
+section,
+.section {
+	@include clearfix();
+
+	box-sizing: border-box;
+	display: block;
+	position: relative;
+
+	/*.orchard-layouts-root > & {
+		&:first-child {
+			@include rem(padding-top, $header-height);
+		}
+	}*/
+
+	&:last-child { margin-bottom: 0; }
+
+	@media all and (min-width: $bp-medium) {
+		padding: 0;
+	}
+}
+
+	.section__content {
+		box-sizing: border-box;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: $content-width;
+		width: 100%;
+
+		.section--wide & { max-width: $content-width-large; }
+		.section--x-wide & { max-width: $content-width-x-large; }
+		.section--xx-wide & { max-width: $content-width-xx-large; }
+		.section--xxx-wide & { max-width: $content-width-xxx-large; }
+		.section--fill & { max-width: none; }
+
+		.section--testimonials & {
+			@include rem(max-width, 480px);
+
+			@media all and (min-width: $bp-medium-large) {
+				max-width: $content-width-xxx-large;
+			}
+		}
+
+		.section--content-left & { margin-left: 0; }
+		.section--content-right & { margin-right: 0; }
+	}
+
+        .section__content__bg {
+            height: 100%;
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            transform: skewY(-4deg);
+            width: 100%;
+            z-index: -1;
+
+            .section--heading & {
+                height: 120%;
+                top: -10%;
+
+                @media all and (min-width: $bp-large) {
+                    height: 140%;
+                    top: -20%;
+                }
+            }
+
+            .section--heading-video & {
+                height: 100%;
+                top: -10%;
+                background: #000;
+            }
+
+            &--skew {
+                height: 140%;
+                left: 0;
+                position: absolute;
+                top: -20%;
+                transform: skewY(4deg);
+                width: 100%;
+            }
+        }
+
+/**
+ * 1. Both need flex in order to fill the height of their parent element.
+ */
+.section--hero {
+    display: flex; /* 1. */
+	min-height: 100vh;
+
+	& .section__content {
+        display: flex; /* 1. */
+    }
+}
+
+.section--heading {
+	@include rem(padding-bottom, $spacing-large * 3);
+	@include rem(padding-top, $spacing-x-large * 3.4);
+
+    @media all and (min-width: $bp-v-tiny) {
+        @include rem(padding-bottom, $spacing-x-large * 3);
+        @include rem(padding-top, $spacing-x-large * 4);
+    }
+
+    @media all and (min-width: $bp-tiny) {
+        @include rem(padding-bottom, $spacing-x-large * 4);
+        @include rem(padding-top, $spacing-x-large * 5);
+    }
+
+	@media all and (min-width: $bp-medium) {
+        @include rem(padding-bottom, $spacing-x-large * 3.8);
+        @include rem(padding-top, $spacing-x-large * 5);
+	}
+}
+
+.section--heading-video {
+    @include rem(height, 540px);
+
+    @media all and (min-width: $bp-v-tiny) {
+        @include rem(height, 620px);
+    }
+
+    @media all and (min-width: $bp-small) {
+        @include rem(height, 820px);
+    }
+
+    @media all and (min-width: $bp-medium) {
+        @include rem(height, 890px);
+    }
+
+    @media all and (min-width: $bp-medium-large) {
+        @include rem(height, 720px);
+    }
+
+    @media all and (min-width: $bp-large) {
+        @include rem(height, 820px);
+    }
+
+    @media all and (min-width: $bp-x-large) {
+        @include rem(height, 860px);
+    }
+
+    @media all and (min-width: $bp-huge) {
+        @include rem(height, 950px);
+    }
+
+    @media all and (min-width: $bp-huge * 1.1 ) { /* 1815px */
+        @include rem(height, 1020px);
+    }
+}
+
+.section--client-break {
+	@include rem(height, $spacing-x-large * 7);
+	@include rem(padding-top, $header-height);
+	@include rem(padding-bottom, $header-height);
+
+	@media all and (min-width: $bp-medium) {
+		@include rem(height, $spacing-x-large * 9.2);
+	}
+
+	&-dark {
+		position: relative;
+		z-index: 1;
+
+		.section__content {
+			position: relative;
+			z-index: 3;
+		}
+
+		&:before {
+			top: 0;
+			left: 0;
+			z-index: 2;
+			position: absolute;
+			display: block;
+			height: 100%;
+			width: 100%;
+			background-color: rgba($color-brand, 0.85);
+		}
+	}
+}
+
+/**
+ * Sections for specific projects.
+ */
+
+.section--about-us {
+    @include rem(height, 750px);
+    @include rem(margin-bottom, $spacing-gigantic * 3.4);
+    @include rem(margin-top, $spacing-gigantic * 3.4);
+
+    color: $color-white;
+
+    @media all and (min-width: $bp-v-tiny) {
+		@include rem(height, 670px);
+    }
+
+    @media all and (min-width: $bp-tiny) {
+		@include rem(height, 600px);
+    }
+
+    @media all and (min-width: $bp-small) {
+		@include rem(height, 440px);
+    }
+
+    @media all and (min-width: $bp-medium) {
+		@include rem(height, 540px);
+		@include rem(padding-bottom, $spacing-gigantic);
+		@include rem(padding-top, $spacing-gigantic);
+    }
+
+    @media all and (min-width: $bp-medium-large) {
+	    @include rem(margin-bottom, $spacing-gigantic * 4.4);
+	    @include rem(margin-top, $spacing-gigantic * 3.4);
+    }
+}
+
+.section--testimonials {
+    @include rem(height, $spacing-x-large * 19);
+    @include rem(margin-bottom, $spacing-gigantic * 3.4);
+    @include rem(margin-top, $spacing-gigantic * 3.4);
+
+    color: $color-white;
+
+    @media all and (min-width: $bp-medium-large) {
+    	@include rem(height, $spacing-large * 14);
+	    @include rem(margin-bottom, $spacing-large * 2);
+	    @include rem(margin-top, $spacing-gigantic * 3.4);
+    }
+}
+
+.section--promo {
+	animation: GradientPromo 30s ease infinite;
+  	background: linear-gradient(230deg,#794bab,#207d9a,#90b348);
+  	background-size: 300% 300%;
+
+  	& h1 {
+  		@include rem(font-size, $font-size-heading-mobile);
+  		@include rem(max-width, 120rem);
+
+  		margin-left: auto;
+  		margin-right: auto;
+
+  		color: $color-white;
+  		opacity: 0.99;
+
+  		@media all and (min-width: $bp-medium) {
+  			@include rem(font-size, $font-size-heading * 1.5);
+  		}
+  	}
+}
+
+.section--3fire {
+	background-image: url(#{$url-images}section-bg-tom-gates.jpg);
+	background-position: 0 0;
+	background-size: cover;
+	color: $color-white;
+}
+
+/**
+ * Section height modifiers.
+ */
+
+.section--height-quarter { height: 25vh; }
+
+.section--height-half {
+	@include rem(min-height, $spacing-large * 10);
+	height: 50vh;
+}
+
+.section--height-full { height: 100vh; }

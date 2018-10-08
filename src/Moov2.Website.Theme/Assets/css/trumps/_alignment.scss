@@ -1,0 +1,40 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $ALIGNMENT
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Utility classes for dictating alignment.
+ */
+
+.align--horizontal-left { float: left; }
+.align--horizontal-right { float: right; }
+
+.align--vertical-middle {
+    display: flex;
+    align-items: center;
+}
+
+.align--vertical-top {
+    display: flex;
+    align-items: flex-start;
+}
+
+.align--center { text-align: center; }
+.align--center\@tiny { @include bp-min-width($bp-tiny) { text-align: center; } }
+.align--center\@small { @include bp-min-width($bp-small) { text-align: center; } }
+.align--center\@medium { @include bp-min-width($bp-medium) { text-align: center; } }
+.align--center\@medium-large { @include bp-min-width($bp-medium-large) { text-align: center; } }
+
+.align--left { text-align: left; }
+.align--left\@tiny { @include bp-min-width($bp-tiny) { text-align: left; } }
+.align--left\@small { @include bp-min-width($bp-small) { text-align: left; } }
+.align--left\@medium { @include bp-min-width($bp-medium) { text-align: left; } }
+.align--left\@medium-large { @include bp-min-width($bp-medium-large) { text-align: left; } }
+
+.align--left { text-align: left; }
+.align--left\@tiny { @include bp-min-width($bp-tiny) { text-align: left; } }
+.align--left\@small { @include bp-min-width($bp-small) { text-align: left; } }
+.align--left\@medium { @include bp-min-width($bp-medium) { text-align: left; } }
+.align--left\@medium-large { @include bp-min-width($bp-medium-large) { text-align: left; } }

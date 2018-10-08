@@ -1,0 +1,132 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $LIST
+ * -----------------------------------------------------------------------------
+ */
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .list__item {
+        box-sizing: border-box;
+        position: relative;
+    }
+
+/**
+ * Displays items adjacent to each other.
+ *
+    <ul class="list list--horizontal">
+        <li class="list__item">
+            First List Item
+        </li><li class="list__item">
+            Second List Item
+        </li>
+        ...
+    </ul>
+ *
+ */
+
+.list {
+
+    > .list__item {
+        max-width: 100%;
+    }
+
+    > .list__item--grow { flex: 1 0 auto; }
+
+    &.double > .list__item { flex: initial; width: 50%; }
+    &.double\@tiny > .list__item { @include bp-min-width($bp-tiny) { width: 50%; } }
+    &.double\@small > .list__item { @include bp-min-width($bp-small) { width: 50%; } }
+    &.double\@medium > .list__item { @include bp-min-width($bp-medium) { width: 50%; } }
+    &.double\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { width: 50%; } }
+    &.double\@large > .list__item { @include bp-min-width($bp-large) { width: 50%; } }
+
+    &.triple > .list__item { width: 33.33%; }
+    &.triple\@tiny > .list__item { @include bp-min-width($bp-tiny) { width: 33.33%; } }
+    &.triple\@small > .list__item { @include bp-min-width($bp-small) { width: 33.33%; } }
+    &.triple\@medium > .list__item { @include bp-min-width($bp-medium) { width: 33.33%; } }
+    &.triple\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { width: 33.33%; } }
+    &.triple\@large > .list__item { @include bp-min-width($bp-large) { width: 33.33%; } }
+
+    &.quad > .list__item { width: 25%; }
+    &.quad\@tiny > .list__item { @include bp-min-width($bp-tiny) { width: 25%; } }
+    &.quad\@small > .list__item { @include bp-min-width($bp-small) { width: 25%; } }
+    &.quad\@medium > .list__item { @include bp-min-width($bp-medium) { width: 25%; } }
+    &.quad\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { width: 25%; } }
+    &.quad\@large > .list__item { @include bp-min-width($bp-large) { width: 25%; } }
+
+    &.five > .list__item { width: 20%; }
+    &.five\@tiny > .list__item { @include bp-min-width($bp-tiny) { width: 20%; } }
+    &.five\@small > .list__item { @include bp-min-width($bp-small) { width: 20%; } }
+    &.five\@medium > .list__item { @include bp-min-width($bp-medium) { width: 20%; } }
+    &.five\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { width: 20%; } }
+    &.five\@large > .list__item { @include bp-min-width($bp-large) { width: 20%; } }
+    &.five\@x-large > .list__item { @include bp-min-width($bp-x-large) { width: 20%; } }
+
+    &.fill-row > .list__item { width: auto; }
+    &.fill-row\@tiny > .list__item { @include bp-min-width($bp-tiny) { width: auto; } }
+    &.fill-row\@small > .list__item { @include bp-min-width($bp-small) { width: auto; } }
+    &.fill-row\@medium > .list__item { @include bp-min-width($bp-medium) { width: auto; } }
+    &.fill-row\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { width: auto; } }
+    &.fill-row\@large > .list__item { @include bp-min-width($bp-large) { width: auto; } }
+}
+
+.list--double {
+    > .list__item {
+        width: 50%;
+    }
+}
+
+/**
+ * Displays items in a vertical list.
+ *
+ * 1. This is to make all boxes within a list__item fill the height.
+ *    Example: this is used for the 'Labs' section.
+ *
+ */
+
+.list--vertical {
+    display: flex;
+    flex-direction: column;
+
+    > .box { flex: 1; } /* 1. */
+
+    > .list__item {
+        @include rem(margin-bottom, $spacing-small);
+    }
+}
+
+.list--justify-around {
+    justify-content: space-around;
+}
+
+.list--justify-between {
+    justify-content: space-between;
+}
+
+.list--justify-center {
+    justify-content: center;
+}
+
+.list--item-width-auto {
+    > .list__item { width: auto; }
+}
+
+.list--bordered { border: 1px solid $color-grey-light; }
+
+.list--padded {
+    > .list__item {
+        @include rem(padding, $spacing-small);
+
+        @include bp-min-width($bp-small) {
+            @include rem(padding, $spacing-default);
+        }
+    }
+}
+
+.list--spacing-compact { > .list__item { @include rem(margin-bottom, $spacing-small); } }
+.list--spacing-base { > .list__item { @include rem(margin-bottom, $spacing-base); } }
+.list--spacing-loose { > .list__item { @include rem(margin-bottom, $spacing-base * 2); } }

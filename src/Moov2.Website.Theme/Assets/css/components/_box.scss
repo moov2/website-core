@@ -1,0 +1,42 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $BOX
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Element that contains other element.
+ */
+
+.box {
+
+	box-sizing: border-box;
+	display: block;
+	position: relative;
+}
+
+.box--logo {
+	width: 100%;
+
+	text-align: center;
+
+	@include bp-min-width($bp-medium-large) {
+		@include rem(width, 250px);
+
+		text-align: right;
+	}
+}
+
+.box--padded { @include rem(padding, $spacing-default); }
+
+.box--thumbnail {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+
+    @include bp-min-width($bp-medium) {
+    	@include rem(max-width, 300px);
+
+    	width: auto;
+    }
+}

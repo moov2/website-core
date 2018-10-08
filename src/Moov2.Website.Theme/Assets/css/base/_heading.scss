@@ -1,0 +1,98 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $HEADING
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Styles for the `h1` to `h6` elements.
+ */
+
+/**
+ * 1. Reduces the spacing above & below the font.
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-family-heading;
+	line-height: 1; /* 1. */
+
+	margin-top: 0;
+}
+
+h1 {
+	@include rem(margin-bottom, $spacing-large);
+}
+
+h2 {
+	@include rem(margin-bottom, $spacing-default * 1.5);
+}
+
+h3,
+h4 {
+	@include rem(margin-bottom, $spacing-default);
+}
+
+h5,
+h6 {
+	@include rem(margin-bottom, $spacing-default / 4);
+}
+
+h1 {
+	@include rem(font-size, $spacing-base * 2);
+	@include rem(margin-bottom, $spacing-default);
+	@include rem(padding-left, $spacing-base);
+	@include rem(padding-right, $spacing-base);
+
+    font-weight: $font-weight-bold;
+    line-height: 1.2;
+
+	@media all and (min-width: $bp-v-tiny) {
+		@include rem(font-size, $font-size-heading-mobile);
+	}
+	@media all and (min-width: $bp-medium) {
+		@include rem(font-size, $font-size-heading-mobile * 1.5);
+		@include rem(margin-bottom, $spacing-large);
+	}
+
+	@media all and (min-width: $bp-medium-large) {
+		@include rem(font-size, $font-size-heading);
+		@include rem(margin-bottom, $spacing-gigantic);
+	}
+}
+
+h2 {
+	@include subheading();
+
+	@include rem(padding-left, $spacing-base);
+	@include rem(padding-right, $spacing-base);
+	@include rem(padding-top, $spacing-large);
+
+	@media all and (min-width: $bp-medium) {
+		@include rem(font-size, $font-size-default * 2);
+	}
+
+	&:first-child { padding-top: 0; }
+}
+
+h3 {
+	@include subsubheading();
+
+	@include rem(padding-left, $spacing-base);
+	@include rem(padding-right, $spacing-base);
+}
+
+h4 {
+	@include rem(font-size, 2rem);
+}
+
+h5 {
+	@include rem(font-size, 1.8rem);
+}
+
+h6 {
+	@include rem(font-size, 1.4rem);
+}

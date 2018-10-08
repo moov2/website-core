@@ -1,0 +1,148 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $HERO
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Homepage content.
+ */
+
+.hero {
+    min-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+    .hero__text {
+        @include rem(margin-bottom, $spacing-base * 2);
+
+        color: $color-white;
+
+        @include bp-min-width($bp-medium) {
+            @include rem(margin-bottom, $spacing-x-large);
+        }
+
+        @include bp-min-width($bp-medium-large) {
+            @include rem(margin-bottom, $spacing-gigantic);
+        }
+
+        h1 {
+            @include rem(font-size, $font-size-large);
+            @include rem(max-width, $spacing-x-large * 6);
+
+            margin-left: auto;
+            margin-right: auto;
+
+            @media all and (min-width: $bp-medium) {
+                @include rem(font-size, $font-size-heading-mobile);
+                @include rem(margin-bottom, $spacing-large);
+                @include rem(max-width, $spacing-x-large * 10);
+            }
+
+            @media all and (min-width: $bp-medium-large) {
+                @include rem(font-size, $font-size-heading-mobile * 1.5);
+                @include rem(margin-bottom, $spacing-default * 3);
+                @include rem(max-width, $spacing-gigantic * 10);
+            }
+        }
+    }
+
+    .hero__brands {
+        @include rem(margin-bottom, $spacing-default);
+
+        width: 100%;
+
+        @include bp-min-width($bp-medium) {
+            @include rem(width, $spacing-gigantic * 10);
+        }
+
+        @include bp-min-width($bp-medium-large) {
+            @include rem(margin-bottom, $spacing-gigantic);
+        }
+    }
+
+    .hero__brands--microsoft {
+        max-width: 76px;
+
+        @include bp-min-width($bp-medium) {
+            max-width: 165px;
+        }
+    }
+
+    .hero__brands--hello {
+        max-width: 68px;
+
+        @include bp-min-width($bp-medium) {
+            max-width: 150px;
+        }
+    }
+
+    .hero__brands--supermassive {
+        max-width: 100px;
+
+        @include bp-min-width($bp-medium) {
+            max-width: 205px;
+        }
+    }
+
+    .hero__images {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .hero__images--hello-games,
+    .hero__images--supermassive {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .hero__images--hello-games {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/hello-games-414x736.jpg);
+
+        @media all and (min-width: $bp-medium) {
+            background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/hello-games-768x1024.jpg);
+        }
+
+        @media all and (min-width: $bp-medium-large) {
+            background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/hello-games-1280x730.jpg);
+        }
+
+        @media all and (min-width: $bp-large) {
+            background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/hello-games-2100x1200.jpg);
+        }
+    }
+
+    .hero__images--supermassive {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/supermassive-games-414x736.jpg);
+
+        @media all and (min-width: $bp-medium) {
+            background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/supermassive-games-768x1024.jpg);
+        }
+
+        @media all and (min-width: $bp-medium-large) {
+            background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/supermassive-games-1280x730.jpg);
+        }
+
+        @media all and (min-width: $bp-large) {
+            background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/supermassive-games-2100x1200-v4.jpg);
+        }
+    }
+
+    .hero__secondary {
+        @include rem(padding-bottom, $spacing-x-large);
+        @include rem(padding-top, $spacing-large);
+
+        @media all and (min-width: $bp-medium + 1) {
+            display: none;
+        }
+    }

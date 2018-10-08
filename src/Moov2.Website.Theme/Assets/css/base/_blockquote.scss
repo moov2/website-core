@@ -1,0 +1,65 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $BLOCKQUOTE
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Styles for `blockquote` element.
+ */
+
+blockquote {
+	@include rem(margin-bottom, $spacing-large);
+
+	color: $color-brand;
+	font-style: italic;
+
+	box-sizing: border-box;
+	display: inline;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	position: relative;
+	width: 100%;
+
+	> p {
+		margin-bottom: 0;
+	}
+
+	&:before,
+	&:after {
+		@include svg-quote-icon();
+
+		content: "";
+		position: absolute;
+		height: 10px;
+		left: -2rem;
+		top: 0;
+		width: 13px;
+
+		background-size: cover;
+	}
+
+	&:after {
+		bottom: 1.5rem;
+		left: auto;
+		right: -2.1rem;
+		top: auto;
+
+		transform: rotate(180deg);
+	}
+}
+
+cite {
+	font-weight: $font-weight-bold;
+	font-style: normal;
+}
+
+.blockquote--white {
+	color: $color-white;
+
+	&:before,
+	&:after {
+		@include svg-quote-icon($color-white);
+	}
+}

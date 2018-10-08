@@ -1,0 +1,220 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $VARS
+ * Contains properties used throughout the stylesheet.
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Flag indicating whether the styles are critical (aka above the fold styles).
+ */
+
+$is-critical: false;
+
+/**
+ * Properties related to URLs.
+ */
+
+$url-images: '../Content/';
+
+/**
+ * Animations.
+ */
+
+$animation-brand-duration: 12s;
+
+/**
+ * Colour palette.
+ */
+
+$color-brand: #171c1e;
+$color-blue: #218ada;
+$color-grey: #c1c1c1;
+$color-grey-dark: #9a9a9a;
+$color-grey-darkest: #353535;
+$color-grey-light: #e4e4e4;
+$color-grey-lightest: #f4f4f4;
+$color-grey-transparent: rgba(228, 228, 228, 0.4);
+$color-orange: #da6721;
+$color-white: #fff;
+$color-white-transparent: rgba(255, 255, 255, 0.2);
+$color-pink: #bb4c72;
+$color-primary: #448eca;
+$color-primary-light: #a8c8e2;
+$color-primary-dark: #0a385f;
+$color-purple: #8127ca;
+$color-red: #da2121; /* also form required colour */
+$color-teal: #27bd92;
+$color-cs-fable: #77E6FE;
+$color-rje: #095498;
+$color-rje-dark: #083d6d;
+$color-rje-light: #1369b8;
+$color-rje-lightest: #1d73c1;
+$color-hello-games: #941f37;
+$color-microsoft-studios: #181818;
+$color-rocket-jump: #095498;
+$color-supermassive: #003948;
+
+/**
+ * Font settings.
+ */
+
+$font-family-loaded: "Hind", sans-serif;
+$font-family-default: sans-serif;
+$font-family-heading: "Montserrat", sans-serif;
+
+$font-color-default: $color-brand;
+$font-color-light: $color-grey;
+
+$font-size-small: 1.6rem;
+$font-size-default: 1.8rem;
+$font-size-large: 2.4rem;
+$font-size-heading: 7rem;
+$font-size-heading-mobile: 4rem;
+
+$font-weight-default: 400;
+$font-weight-bold: 700;
+
+$line-height-default: 2.4rem;
+
+// value added to the element font size to create line height.
+$line-height-addition: .6rem;
+
+/**
+ * Spacing settings
+ */
+
+$spacing-small: .75rem;
+$spacing-base: 1.5rem;
+$spacing-base-px: 15px;
+$spacing-default: 2rem;
+$spacing-large: 4rem;
+$spacing-x-large: 5rem;
+$spacing-gigantic: 7rem;
+
+/**
+ * Animation defaults.
+ */
+
+$animation-duration-default: .25s;
+$animation-timing-default: ease-in-out;
+
+/**
+ * Avatar settings.
+ */
+
+$avatar-dimensions: 70px;
+
+/**
+ * Border settings.
+ */
+
+$border-color-default: $color-grey-light;
+
+/**
+ * Breakpoint widths.
+ */
+
+$bp-figcaption-aside: 1160px;
+$bp-figure-floated: 630px;
+$bp-tiles-stack-default: 650px;
+$bp-footer-stack: 750px;
+$bp-reduce-heading-font-size: 550px;
+$bp-promo-small: 680px;
+$bp-content-padding-top: 600px;
+
+$bp-v-tiny: 360px;
+$bp-tiny: 480px;
+$bp-small: 640px;
+$bp-medium: 768px;
+$bp-medium-large: 1024px;
+$bp-large: 1280px;
+$bp-x-large: 1400px;
+$bp-huge: 1650px;
+$bp-gigantic: 2000px;
+
+/**
+ * Code settings.
+ */
+
+$code-background-color: $color-grey-light;
+$code-font-size: $font-size-small;
+
+/**
+ * Content settings.
+ */
+
+$content-width: 800px;
+$content-width-large: 1100px;
+$content-width-x-large: 1280px;
+$content-width-xx-large: 1400px;
+$content-width-xxx-large: 1600px;
+
+$content-line-length: $content-width;
+
+/**
+ * Figure settings.
+ */
+
+$figure-caption-width: 150px;
+
+/**
+ * Layout settings.
+ */
+
+$layout-width-max: 1500px;
+
+/**
+ * Header height. This is the main header that includes the logo and nav.
+ */
+
+$header-height: 71px;
+
+/**
+ * Logo settings.
+ */
+
+$logo-brand-height: 30px;
+$logo-brand-width: 95px;
+$logo-brand-width-m: 37px;
+
+$logo-technology-height: 40px;
+$logo-technology-width: 40px;
+
+/**
+ * Navigation settings.
+ */
+
+$nav-font-size-default: $font-size-default;
+$nav-font-size-toggle: 4.8rem;
+$nav-animation-duration: $animation-duration-default;
+$nav-animation-timing: $animation-timing-default;
+
+/**
+ * Note settings.
+ */
+
+$note-background-color: #c74a4a;
+$note-color: #fff;
+
+/**
+ * Post settings.
+ */
+
+$post-thumbnail-height: 11rem;
+$post-thumbnail-width: 18rem;
+$post-thumbnail-alignment: 1rem;
+
+/**
+ * Promo settings.
+ */
+
+$promo-min-height: 300px;
+$promo-description-width: 600px;
+$promo-btn-width: 200px;
+
+/**
+ * Site settings.
+ */
+
+$site-background: $color-white;
