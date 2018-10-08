@@ -1,7 +1,7 @@
 ﻿using OrchardCore.DisplayManagement.Manifest;
 
 [assembly: Theme(
-    Name = "Moov2 Website Them",
+    Name = "Moov2 Website Theme",
     Author = "Moov2",
     Website = "https://moov2.com",
     Version = "0.1.0",
