@@ -11,8 +11,8 @@
 
 textarea {
     display: block;
-
     box-sizing: border-box;
+    @include rem(margin-bottom, $spacing-base);
     width: 100%;
 
     resize: vertical;
