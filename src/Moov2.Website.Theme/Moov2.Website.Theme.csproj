@@ -6,6 +6,9 @@
 
   <ItemGroup>
     <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-beta3-68776" />
+    <PackageReference Include="OrchardCore.Flows" Version="1.0.0-beta3-68776" />
+    <PackageReference Include="OrchardCore.Lists" Version="1.0.0-beta3-68776" />
+    <PackageReference Include="OrchardCore.Media" Version="1.0.0-beta3-68776" />
     <PackageReference Include="OrchardCore.Theme.Targets" Version="1.0.0-beta3-68776" />
   </ItemGroup>
 

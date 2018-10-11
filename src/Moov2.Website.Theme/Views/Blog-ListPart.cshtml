@@ -1,0 +1,29 @@
+﻿@model OrchardCore.Lists.ViewModels.ListPartViewModel
+
+@inject OrchardCore.ContentManagement.Display.IContentItemDisplayManager ContentItemDisplayManager
+
+@{
+    Model.Pager.Classes.Add("pager padding--top-base flex flex--direction-row flex--justify-between border--top border--color-grey-transparent");
+    Model.Pager.Tag = Model.Pager.ItemTag = "div";
+    Model.Pager.NextText = "Older";
+    Model.Pager.PreviousText = "Newer";
+    Model.Pager.FirstClass = "pager__newer";
+    Model.Pager.LastClass = "pager__older";
+}
+
+<div class="section padding--vertical-gigantic">
+    <div class="section__content">
+        <ul class="list">
+            @foreach (var contentItem in Model.ContentItems)
+            {
+                var contentItemSummary = await ContentItemDisplayManager.BuildDisplayAsync(contentItem, Model.Context.Updater, "Summary", Model.Context.GroupId);
+
+                <li class="list__item margin--bottom-gigantic">
+                    @await DisplayAsync(contentItemSummary)
+                </li>
+            }
+        </ul>
+
+        @await DisplayAsync(Model.Pager)
+    </div>
+</div>
