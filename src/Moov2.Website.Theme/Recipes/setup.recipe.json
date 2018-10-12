@@ -208,18 +208,18 @@
               "PartName": "Post",
               "Name": "Post",
               "Settings": {
-                "Position": "0"
+                "Position": "2"
               }
             },
             {
               "PartName": "AutoroutePart",
               "Name": "AutoroutePart",
               "Settings": {
-                "Position": "2",
+                "Position": "1",
                 "DisplayName": null,
                 "Description": null,
                 "Editor": null,
-                "Pattern": null,
+                "Pattern": "posted/{{ ContentItem | display_text | slugify }}",
                 "AllowCustomPath": "True",
                 "ShowHomepageOption": "False"
               }
@@ -228,7 +228,7 @@
               "PartName": "CommonPart",
               "Name": "CommonPart",
               "Settings": {
-                "Position": "4",
+                "Position": "6",
                 "DisplayName": null,
                 "Description": null,
                 "Editor": null,
@@ -242,14 +242,14 @@
               "PartName": "FlowPart",
               "Name": "FlowPart",
               "Settings": {
-                "Position": "3"
+                "Position": "5"
               }
             },
             {
               "PartName": "TitlePart",
               "Name": "TitlePart",
               "Settings": {
-                "Position": "1"
+                "Position": "0"
               }
             }
           ]
@@ -281,7 +281,7 @@
                 "DisplayName": null,
                 "Description": null,
                 "Editor": null,
-                "Pattern": null,
+                "Pattern": "{{ ContentItem | display_text | slugify }}",
                 "AllowCustomPath": "True",
                 "ShowHomepageOption": "False"
               }
@@ -367,14 +367,14 @@
               "PartName": "Html",
               "Name": "Html",
               "Settings": {
-                "Position": "0"
+                "Position": "1"
               }
             },
             {
               "PartName": "TitlePart",
               "Name": "TitlePart",
               "Settings": {
-                "Position": "1"
+                "Position": "0"
               }
             }
           ]
