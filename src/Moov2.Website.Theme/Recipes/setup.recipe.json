@@ -50,7 +50,6 @@
         "OrchardCore.Title",
         "OrchardCore.Media",
         "OrchardCore.Menu",
-        "OrchardCore.MiniProfiler",
         "OrchardCore.Navigation",
         "OrchardCore.Roles",
         "OrchardCore.Users",
