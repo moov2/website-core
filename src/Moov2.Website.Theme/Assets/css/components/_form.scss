@@ -41,7 +41,18 @@ form {
 
 .validation-summary-errors,
 .field-validation-error,
-.input--required { color: $color-red; }
+.input--required {
+    color: $color-red;
+
+    ul {
+        @include rem(margin-bottom, $spacing-base);
+        @include rem(padding-left, $spacing-base);
+    }
+}
+
+.validation-summary-valid {
+    display: none;
+}
 
 .field-validation-error { 
     @include rem(font-size, $font-size-small);
