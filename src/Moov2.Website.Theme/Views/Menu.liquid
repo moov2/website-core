@@ -1,0 +1,5 @@
+<ul class="list flex flex--direction-row flex--justify-between text--centered">
+  {% for item in Model.Items %}
+  {{ item | shape_render }}
+  {% endfor %}
+</ul>
