@@ -40,7 +40,7 @@
     "bundle": "webpack -d",
     "bundle:dist": "webpack -p",
     "bundle:watch": "webpack -d --watch",
-    "develop": "start npm run patternlibrary:develop && npm run bundle:watch",
+    "develop": "npm run bundle:watch",
     "test": "npm run bundle && karma start karma.conf.js",
     "lint": "standard"
   },
