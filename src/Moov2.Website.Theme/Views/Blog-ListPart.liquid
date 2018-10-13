@@ -1,0 +1,24 @@
+﻿<div class="section padding--vertical-gigantic">
+    <div class="section__content">
+        <ul class="list">
+            {% for item in Model.ContentItems %}
+            <li class="list__item margin--bottom-gigantic">
+                {{ item | shape_build_display: "Summary" | shape_render }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% assign previousText = "Newer" | t %}
+        {% assign nextText = "Older" | t %}
+        {% assign firstClass = "pager__newer" %}
+        {% assign lastClass = "pager__older" %}
+        {% assign previousClass = "pager__newer" %}
+        {% assign nextClass = "pager__older" %}
+        {% assign tag = "div" %}
+        {% assign itemTag = "div" %}
+
+        {% shape_add_classes Model.Pager "pager padding--top-base flex flex--direction-row flex--justify-between border--top border--color-grey-transparent" %}
+        {% shape_pager Model.Pager previous_text:previousText, next_text:nextText, first_class:firstClass, last_class:lastClass, tag:tag, item_tag:itemTag, previous_class: previousClass, next_class: nextClass %}
+
+        {{ Model.Pager | shape_render }}
+    </div>
+</div>
