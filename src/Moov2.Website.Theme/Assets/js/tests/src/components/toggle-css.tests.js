@@ -2,7 +2,9 @@
 
 "use strict";
 
-var helpers = require('helpers');
+var helpers = require('helpers')
+
+import $ from 'shoestring'
 
 suite('components/toggleCss', function() {
 	var toggleCss = require('components/toggle-css');

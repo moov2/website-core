@@ -1,7 +1,9 @@
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require('autoprefixer')
+
+const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = [{
   name: 'js',
@@ -11,10 +13,15 @@ module.exports = [{
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
+    rules: [{
       test: /.*\.js$/,
       exclude: /(node_modules)/,
-      loaders: ['babel-loader']
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
+      }
     }]
   },
   resolve: {
@@ -38,10 +45,15 @@ module.exports = [{
     filename: 'suite.bundle.js'
   },
   module: {
-    loaders: [{
+    rules: [{
       test: /.*\.js$/,
       exclude: /(node_modules)/,
-      loaders: ['babel-loader']
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
+      }
     }]
   },
   resolve: {
@@ -58,14 +70,27 @@ module.exports = [{
     main: './Assets/css/Site.scss'
   },
   output: {
-    path: path.resolve(__dirname, './wwwroot/Styles'),
-    filename: 'Site.css'
+    path: path.resolve(__dirname, './wwwroot/Styles')
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'Site',
+          test: /\.scss$/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    }
   },
   module: {
-    rules: [{
-      test: /\.scss$/,
-      use: ExtractTextPlugin.extract({
+    rules: [
+      {
+        test: /\.scss$/,
         use: [{
+          loader: MiniCssExtractPlugin.loader,
+        }, {
           loader: 'css-loader'
         }, {
           loader: 'postcss-loader',
@@ -76,15 +101,17 @@ module.exports = [{
           }
         }, {
           loader: 'sass-loader'
-        }]
-      })
-    }, {
-      test: /\.(png|jpg|gif|.svg)$/,
-      loader: 'file-loader'
-    }]
+        }],
+      }, {
+        test: /\.(png|jpg|gif|.svg)$/,
+        loader: 'file-loader'
+      }
+    ]
   },
   plugins: [
-    new ExtractTextPlugin('Site.css'),
+    new MiniCssExtractPlugin({
+      filename: "[name].css"
+    }),
     new CopyWebpackPlugin([
       { from: path.resolve(__dirname, './Assets/content/'), to: path.resolve(__dirname, './wwwroot/Content/') }
     ])

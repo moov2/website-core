@@ -5,18 +5,18 @@
  */
 
 var app = function () {
-	return {
-		/**
-		 * Adds new layer to application.
-		 */
-		addLayer: function (layer) {
-			if (!layer) {
-				return;
-			}
-			
-			layer();
-		}
-	};
-};
+  return {
+    /**
+     * Adds new layer to application.
+     */
+    addLayer: function (layer) {
+      if (!layer) {
+        return
+      }
 
-export default app;
+      layer()
+    }
+  }
+}
+
+export default app

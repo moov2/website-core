@@ -1,6 +1,8 @@
 /* global $ */
 "use strict";
 
+import $ from 'shoestring'
+
 suite('browser/setClasses', function() {
 	var setClasses = require('browser/set-classes'),
 		$html = $('html');

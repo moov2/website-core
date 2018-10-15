@@ -13,7 +13,7 @@ module.exports = (function () {
 	var $sandbox = $('.js-sandbox');
 	
 	if ($sandbox.length === 0) {
-		throw('Element with `js-sandbox` class must be added to test DOM');
+		$('body').append('<div class="js-sandbox"></div>');
 	}
 	
 	/**

@@ -8,21 +8,23 @@
  */
 
 export default function () {
-    if (Modernizr.objectfit) {
-        return;
+  if (Modernizr.objectfit) {
+    return
+  }
+
+  var selectors = ['.object-fit--picture']
+
+  $(selectors.join(',')).each(function () {
+    var $container = $(this)
+
+    var $img = $container.find('img')
+
+    var imgUrl = $img.prop('src') || $img[0].currentSrc
+
+    if (imgUrl) {
+      $container
+        .css('backgroundImage', 'url(' + imgUrl + ')')
+        .addClass('compat-object-fit')
     }
-
-    var selectors = ['.object-fit--picture'];
-
-    $(selectors.join(',')).each(function () {
-        var $container = $(this),
-            $img = $container.find('img'),
-            imgUrl = $img.prop('src') || $img[0].currentSrc;
-
-        if (imgUrl) {
-            $container
-                .css('backgroundImage', 'url(' + imgUrl + ')')
-                .addClass('compat-object-fit');
-        }
-    });
+  })
 };
