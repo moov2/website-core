@@ -5,5 +5,9 @@ dotnet: 2.0.0
 install:
 - dotnet restore
 
+env:
+- THEME_DIR=src/Moov2.Website.Theme
+
 script:
+ - cd $THEME_DIR && npm install
  - dotnet build
