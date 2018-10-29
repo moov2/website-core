@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using OrchardCore.Logging;
 
 namespace Moov2.Website
 {
@@ -15,8 +16,8 @@ namespace Moov2.Website
         {
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
-
-            app.UseOrchardCore();
+            
+            app.UseOrchardCore(c => c.UseSerilogTenantNameLoggingMiddleware());
         }
     }
 }

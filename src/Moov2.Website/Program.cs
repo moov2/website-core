@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using OrchardCore.Logging;
 
 namespace Moov2.Website
 {
@@ -12,6 +13,7 @@ namespace Moov2.Website
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseSerilogWeb()
                 .UseStartup<Startup>()
                 .Build();
     }
