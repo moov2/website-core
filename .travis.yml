@@ -1,12 +1,14 @@
 language: csharp
 mono: none
-dotnet: 2.0.0
-
+# dotnet: 2.1.300
+env:
+  global:
+    - DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+    - DOTNET_CLI_TELEMETRY_OPTOUT: 1   
+    - THEME_DIR=src/Moov2.Website.Theme
+  
 install:
 - dotnet restore
-
-env:
-- THEME_DIR=src/Moov2.Website.Theme
 
 script:
  - cd $THEME_DIR && npm install
