@@ -1,0 +1,26 @@
+﻿<article class="post content-item post--summary">
+    <ul class="list flex flex--direction-column flex--direction-row@medium flex--align-center@medium">
+        <li class="list__item">
+            {% if Model.ContentItem.Content.Post.Thumbnail.Paths %}
+            <img asset-src="{{ Model.ContentItem.Content.Post.Thumbnail.Paths.first }}" alt="Thumbnail for {{ Model.ContentItem.Content.TitlePart.Title }} blog post" class="box box--thumbnail bg--color-grey shadow--box-light" />
+            {% else %}
+            <img src="/Themes/Moov2/Content/blog-default-image.jpg" alt="Thumbnail for {{ Model.ContentItem.Content.TitlePart.Title }} blog post" class="box box--thumbnail bg--color-grey shadow--box-light" />
+            {% endif %}
+        </li>
+
+        <li class="list__item margin--left@medium">
+            <h2 class="margin--bottom-small padding--top-base padding--top-none@medium">
+                {% a display_for:Model.ContentItem %}
+                    {{ Model.ContentItem.Content.TitlePart.Title }}
+                {% enda %}
+            </h2>
+
+            {% assign format = "dd.MM.yy" | t %}
+            {% assign dateTime = "DateTime" | shape_new: utc: Model.ContentItem.CreatedUtc, format: format | shape_stringify %}
+
+            <p class="text--small text--grey">{{ "{0}" | t: dateTime | raw }} | {{ Model.ContentItem.Owner }}</p>
+
+            {{ Model.Content | shape_render }}
+        </li>
+    </ul>
+</article>

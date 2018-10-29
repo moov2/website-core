@@ -21,6 +21,16 @@ h6 {
 	line-height: 1; /* 1. */
 
 	margin-top: 0;
+
+	a {
+		color: $font-color-default;
+		font-weight: $font-weight-bold;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 h1 {
