@@ -5457,7 +5457,7 @@
                   "Title": "Rocket Jump"
                 },
                 "SectionPart": {
-                  "CssClass": "section section--xxx-wide margin--bottom-none bg--rocket-jump"
+                  "CssClass": "section section--xxx-wide margin--bottom-none bg--rocket-jump overflow--hidden"
                 },
                 "FlowPart": {
                   "Widgets": [
