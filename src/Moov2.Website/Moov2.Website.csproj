@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Moov2.OrchardCore.SEO" Version="0.0.1-beta" />
+    <PackageReference Include="Moov2.OrchardCore.SEO" Version="0.0.2-beta" />
     <PackageReference Include="Moov2.OrchardCore.Widgets" Version="0.0.2-beta" />
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-beta3-69192" />
     <PackageReference Include="OrchardCore.Logging.Serilog" Version="1.0.0-beta3-69192" />
