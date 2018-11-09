@@ -32,6 +32,8 @@ Navigate to `src/Moov2.Website` and run `dotnet run`. Open your browser to the s
 
 Open `Moov2.Website.sln` and build the solution. Ensure the `Moov2.Website` is the default project and run it to be presented with the [Orchard Core setup page](https://orchardcore.readthedocs.io/en/dev/docs/getting-started/README/#setup-your-application).
 
+_Note: Make sure to SSL has been enabled for Moov2.Website before running the project._
+
 ## Orchard Core Setup
 
 To get Orchard Core running with the same configuration & content as [moov2.com](https://moov2.com), select the **Moov2** recipe.
