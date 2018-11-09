@@ -20,7 +20,7 @@ The theme requires NodeJS to assist with gathering third party front-end depeden
 
 ## Getting Started
 
-Clone the repository using the command `git@github.com:moov2/website-core.git`.
+Clone the repository using the command `git clone git@github.com:moov2/website-core.git`.
 
 Next ensure you've got all the front-end dependencies for the theme by running `cd src/Moov2.Website.Theme && npm install`.
 
