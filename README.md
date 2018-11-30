@@ -20,7 +20,7 @@ The theme requires NodeJS to assist with gathering third party front-end depeden
 
 ## Getting Started
 
-Clone the repository using the command `git@github.com:moov2/website-core.git`.
+Clone the repository using the command `git clone git@github.com:moov2/website-core.git`.
 
 Next ensure you've got all the front-end dependencies for the theme by running `cd src/Moov2.Website.Theme && npm install`.
 
@@ -31,6 +31,8 @@ Navigate to `src/Moov2.Website` and run `dotnet run`. Open your browser to the s
 ### Visual Studio 2017
 
 Open `Moov2.Website.sln` and build the solution. Ensure the `Moov2.Website` is the default project and run it to be presented with the [Orchard Core setup page](https://orchardcore.readthedocs.io/en/dev/docs/getting-started/README/#setup-your-application).
+
+_Note: Make sure to SSL has been enabled for Moov2.Website before running the project._
 
 ## Orchard Core Setup
 
