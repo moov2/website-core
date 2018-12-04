@@ -466,31 +466,6 @@
         {
           "ContentItemId": "[js: uuid()]",
           "ContentType": "Html",
-          "DisplayText": "Main Menu",
-          "Latest": true,
-          "Published": true,
-          "Owner": "[js: parameters('AdminUsername')]",
-          "Author": "[js: parameters('AdminUsername')]",
-          "LayerMetadata": {
-            "Layer": "Always",
-            "Zone": "Navigation",
-            "RenderTitle": false,
-            "Position": 10
-          },
-          "Html": {
-            "Content": {
-              "Html": "[file:text('Snippets/navigation.html')]"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "content",
-      "Data": [
-        {
-          "ContentItemId": "[js: uuid()]",
-          "ContentType": "Html",
           "DisplayText": "Footer Primary",
           "Latest": true,
           "Published": true,
@@ -6010,6 +5985,107 @@
           "Name": "Homepage",
           "Rule": "isHomepage()",
           "Description": "The widgets in this layer are only displayed on the homepage."
+        }
+      ]
+    },
+    {
+      "name": "content",
+      "data": [
+        {
+          "ContentItemId": "43e92qz0fm3th27zb0w2336d4v",
+          "ContentItemVersionId": "45h153m2c7mpdzc3yd8axk1f4g",
+          "ContentType": "Menu",
+          "DisplayText": "Main Menu",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-10-13T12:45:51.7508271Z",
+          "PublishedUtc": "2018-10-13T13:07:24.2836824Z",
+          "CreatedUtc": "2018-10-13T13:07:24.2836824Z",
+          "Owner": "dan@moov2.com",
+          "Author": "dan@moov2.com",
+          "TitlePart": {
+            "Title": "Main Menu"
+          },
+          "AliasPart": {
+            "Alias": "main-menu"
+          },
+          "MenuPart": {},
+          "MenuItemsListPart": {
+            "MenuItems": [
+              {
+                "Id": 0,
+                "ContentItemId": "4sczkqffm9wtrwwr4btns9mgnh",
+                "ContentItemVersionId": null,
+                "ContentType": "LinkMenuItem",
+                "DisplayText": null,
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-10-13T12:45:15.0330667Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "dan@moov2.com",
+                "LinkMenuItemPart": {
+                  "Name": "Work",
+                  "Url": "~/work"
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "4epwe5w2cca633x6gkt9gv6gc6",
+                "ContentItemVersionId": null,
+                "ContentType": "LinkMenuItem",
+                "DisplayText": null,
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-10-13T12:45:27.806672Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "dan@moov2.com",
+                "LinkMenuItemPart": {
+                  "Name": "Blog",
+                  "Url": "~/blog"
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "4mz82g6t29kdmx1gka2akjje54",
+                "ContentItemVersionId": null,
+                "ContentType": "LinkMenuItem",
+                "DisplayText": null,
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-10-13T12:45:38.7622459Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "dan@moov2.com",
+                "LinkMenuItemPart": {
+                  "Name": "About",
+                  "Url": "~/contact"
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "4s6jveaxshpve0x3zzf2wpqrwp",
+                "ContentItemVersionId": null,
+                "ContentType": "LinkMenuItem",
+                "DisplayText": null,
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-10-13T12:45:49.8993602Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "dan@moov2.com",
+                "LinkMenuItemPart": {
+                  "Name": "Contact",
+                  "Url": "~/contact"
+                }
+              }
+            ]
+          }
         }
       ]
     }
